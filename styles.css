@@ -66,7 +66,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   max-width: var(--max-w);
   margin: 0 auto;
   padding: 0 24px;
-  height: 64px;
+  height: 160px;
 }
 .logo {
   display: flex;
@@ -79,15 +79,14 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 }
 .logo-icon { display: flex; align-items: center; }
 .logo-img {
-  height: 56px !important;
-  width: auto !important;
-  max-width: none !important;
-  display: block !important;
+  height: 150px;
+  width: auto;
+  max-width: none;
 }
 .logo-img-footer {
-  height: 80px !important;
-  width: auto !important;
-  max-width: none !important;
+  height: 150px;
+  width: auto;
+  max-width: none;
 }
 .logo-accent {
   background: linear-gradient(135deg, var(--accent) 0%, var(--accent-2) 55%, var(--accent-3) 100%);
@@ -173,7 +172,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
    ============================================================ */
 .hero {
   position: relative;
-  padding: 140px 0 80px;
+  padding: 220px 0 80px;
   overflow: hidden;
   text-align: center;
 }
@@ -839,7 +838,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   .btn-nav { display: none; }
   .nav-toggle { display: block; }
 
-  .hero { padding: 100px 0 60px; }
+  .hero { padding: 200px 0 60px; }
   .steps {
     flex-direction: column;
     gap: 20px;
@@ -896,7 +895,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   display: flex;
   flex-direction: column;
   position: absolute;
-  top: 64px; left: 0; right: 0;
+  top: 160px; left: 0; right: 0;
   background: rgba(8, 10, 20, 0.97);
   backdrop-filter: blur(16px);
   padding: 16px 24px 24px;
