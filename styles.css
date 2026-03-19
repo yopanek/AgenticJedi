@@ -79,12 +79,15 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 }
 .logo-icon { display: flex; align-items: center; }
 .logo-img {
-  height: 48px;
-  width: auto;
+  height: 56px !important;
+  width: auto !important;
+  max-width: none !important;
+  display: block !important;
 }
 .logo-img-footer {
-  height: 72px;
-  width: auto;
+  height: 80px !important;
+  width: auto !important;
+  max-width: none !important;
 }
 .logo-accent {
   background: linear-gradient(135deg, var(--accent) 0%, var(--accent-2) 55%, var(--accent-3) 100%);
