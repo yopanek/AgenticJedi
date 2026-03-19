@@ -78,6 +78,14 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   white-space: nowrap;
 }
 .logo-icon { display: flex; align-items: center; }
+.logo-img {
+  height: 48px;
+  width: auto;
+}
+.logo-img-footer {
+  height: 72px;
+  width: auto;
+}
 .logo-accent {
   background: linear-gradient(135deg, var(--accent) 0%, var(--accent-2) 55%, var(--accent-3) 100%);
   -webkit-background-clip: text;
