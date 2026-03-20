@@ -85,7 +85,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   margin: 0 auto 8px;
 }
 .logo-img {
-  height: 150px;
+  height: 75px;
   width: auto;
   max-width: none;
 }
