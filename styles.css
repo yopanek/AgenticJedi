@@ -191,6 +191,21 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   background-size: 48px 48px;
   mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, black 40%, transparent 100%);
 }
+.supported-badges {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 28px;
+}
+.supported-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
 .badge {
   display: inline-flex;
   align-items: center;
@@ -203,7 +218,6 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   font-size: 0.8rem;
   font-weight: 600;
   letter-spacing: 0.02em;
-  margin-bottom: 28px;
 }
 .hero-headline {
   font-size: clamp(2.4rem, 5.5vw, 3.75rem);
