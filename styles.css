@@ -654,6 +654,91 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 .pricing-note strong { color: var(--text); }
 
 /* ============================================================
+   ADD-ONS
+   ============================================================ */
+.addons-header {
+  text-align: center;
+  margin-top: 72px;
+  margin-bottom: 40px;
+}
+.addons-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-bottom: 20px;
+}
+.addon-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  transition: border-color 0.2s;
+}
+.addon-card:hover { border-color: var(--border-accent); }
+.addon-icon { font-size: 2.2rem; }
+.addon-body { flex: 1; }
+.addon-name {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.addon-desc {
+  font-size: 0.875rem;
+  color: var(--text-dim);
+  line-height: 1.65;
+  margin-bottom: 16px;
+}
+.addon-features {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.addon-features li {
+  font-size: 0.85rem;
+  color: var(--text-dim);
+}
+.addon-price-block {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+}
+.addon-price {
+  display: flex;
+  align-items: baseline;
+  gap: 3px;
+}
+.addon-plus {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+.addon-amount {
+  font-size: 2.4rem;
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  line-height: 1;
+}
+.addon-period {
+  font-size: 0.9rem;
+  color: var(--text-dim);
+}
+.addons-note {
+  text-align: center;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  margin-top: 8px;
+}
+
+@media (max-width: 768px) {
+  .addons-grid { grid-template-columns: 1fr; }
+}
+
+/* ============================================================
    TESTIMONIALS
    ============================================================ */
 .testimonials-grid {
