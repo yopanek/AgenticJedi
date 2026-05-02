@@ -645,6 +645,76 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 }
 
 /* ============================================================
+   BEFORE / AFTER CARD (Why Agentic Jedi)
+   ============================================================ */
+.before-after-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+.ba-header {
+  background: rgba(255, 255, 255, 0.03);
+  border-bottom: 1px solid var(--border);
+  padding: 14px 24px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+}
+.ba-body {
+  display: flex;
+  gap: 0;
+  padding: 24px;
+}
+.ba-col {
+  flex: 1;
+}
+.ba-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+  margin-bottom: 14px;
+}
+.ba-label-after {
+  color: var(--accent);
+}
+.ba-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.ba-list li {
+  font-size: 0.85rem;
+  color: var(--text-dim);
+  line-height: 1.4;
+}
+.ba-divider {
+  flex: 0 0 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  color: var(--accent);
+  opacity: 0.5;
+}
+.ba-footer {
+  border-top: 1px solid var(--border);
+  padding: 14px 24px;
+  font-size: 0.85rem;
+  color: var(--text-dim);
+  text-align: center;
+  background: rgba(255, 140, 0, 0.04);
+}
+.ba-footer strong {
+  color: var(--accent);
+}
+
+/* ============================================================
    PRICING
    ============================================================ */
 .pricing-grid {
