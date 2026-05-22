@@ -633,9 +633,10 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
    ============================================================ */
 .why-split {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 64px;
-  align-items: center;
+  grid-template-columns: 1fr;
+  gap: 0;
+  max-width: 720px;
+  margin: 0 auto;
 }
 .why-desc {
   font-size: 1rem;
