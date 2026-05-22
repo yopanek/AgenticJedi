@@ -79,18 +79,18 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 }
 .logo-icon { display: flex; align-items: center; }
 .hero-logo {
-  height: 350px;
+  height: 120px;
   width: auto;
-  max-width: none;
+  max-width: 480px;
   margin: 0 auto 8px;
 }
 .logo-img {
-  height: 75px;
+  height: 44px;
   width: auto;
   max-width: none;
 }
 .logo-img-footer {
-  height: 150px;
+  height: 80px;
   width: auto;
   max-width: none;
 }
@@ -139,9 +139,9 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   color: #fff;
 }
 .btn-primary:hover {
-  background: linear-gradient(135deg, #FFB830 0%, #FF4DB8 100%);
+  background: linear-gradient(135deg, #33DFFF 0%, #6699FF 100%);
   transform: translateY(-1px);
-  box-shadow: 0 4px 24px rgba(255, 140, 0, 0.35);
+  box-shadow: 0 4px 24px rgba(0, 200, 255, 0.35);
 }
 .btn-outline {
   background: transparent;
@@ -168,7 +168,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   font-size: 0.85rem;
 }
 .btn-nav:hover {
-  background: linear-gradient(135deg, #FFB830 0%, #FF4DB8 100%);
+  background: linear-gradient(135deg, #33DFFF 0%, #6699FF 100%);
 }
 .btn-lg { padding: 14px 28px; font-size: 1rem; border-radius: 10px; }
 .btn-block { width: 100%; }
@@ -186,8 +186,8 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   position: absolute;
   inset: 0;
   background-image:
-    linear-gradient(rgba(255, 140, 0, 0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 140, 0, 0.04) 1px, transparent 1px);
+    linear-gradient(rgba(0, 200, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 200, 255, 0.04) 1px, transparent 1px);
   background-size: 48px 48px;
   mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, black 40%, transparent 100%);
 }
@@ -210,7 +210,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  background: rgba(255, 140, 0, 0.1);
+  background: rgba(0, 200, 255, 0.1);
   border: 1px solid var(--border-accent);
   color: var(--accent);
   padding: 5px 14px;
@@ -326,8 +326,8 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   line-height: 1.6;
 }
 .chat-bubble-you {
-  background: linear-gradient(135deg, rgba(255, 140, 0, 0.22), rgba(224, 64, 160, 0.18));
-  border: 1px solid rgba(255, 140, 0, 0.25);
+  background: linear-gradient(135deg, rgba(0, 200, 255, 0.22), rgba(68, 119, 238, 0.18));
+  border: 1px solid rgba(0, 200, 255, 0.25);
   color: var(--text);
   border-bottom-right-radius: 4px;
 }
@@ -385,7 +385,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   text-decoration: underline;
   text-underline-offset: 3px;
 }
-.use-cases-note a:hover { color: #FFB830; }
+.use-cases-note a:hover { color: #33DFFF; }
 
 /* CTA note */
 .cta-note {
@@ -612,22 +612,22 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   font-weight: 600;
   border: 1px solid var(--border);
 }
-.arch-you { background: rgba(255, 140, 0, 0.1); color: var(--accent); border-color: var(--border-accent); }
+.arch-you { background: rgba(0, 200, 255, 0.1); color: var(--accent); border-color: var(--border-accent); }
 .arch-chat { background: rgba(255,255,255,0.04); }
 .arch-openclaw {
-  background: linear-gradient(135deg, rgba(255, 140, 0, 0.12), rgba(123, 53, 214, 0.12));
-  border-color: rgba(255, 140, 0, 0.3);
+  background: linear-gradient(135deg, rgba(0, 200, 255, 0.12), rgba(139, 58, 214, 0.12));
+  border-color: rgba(0, 200, 255, 0.3);
   color: var(--text);
   font-size: 1rem;
   padding: 12px 24px;
 }
 .arch-model { background: rgba(72, 187, 120, 0.08); color: #68d391; border-color: rgba(72,187,120,0.2); }
-.arch-tools { background: rgba(224, 64, 160, 0.08); color: #f472b6; border-color: rgba(224,64,160,0.2); }
+.arch-tools { background: rgba(68, 119, 238, 0.08); color: #f472b6; border-color: rgba(68,119,238,0.2); }
 .arch-arrow { color: var(--text-muted); font-size: 1.2rem; }
 .arch-down { color: var(--text-muted); font-size: 1.2rem; }
 .arch-highlight {
   text-align: center;
-  background: rgba(255, 140, 0, 0.05);
+  background: rgba(0, 200, 255, 0.05);
   border: 1px solid var(--border-accent);
   border-radius: var(--radius);
   padding: 20px 32px;
@@ -708,7 +708,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   font-size: 0.85rem;
   color: var(--text-dim);
   text-align: center;
-  background: rgba(255, 140, 0, 0.04);
+  background: rgba(0, 200, 255, 0.04);
 }
 .ba-footer strong {
   color: var(--accent);
@@ -736,10 +736,10 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 }
 .pricing-card:hover { border-color: var(--border-accent); }
 .pricing-featured {
-  border-color: rgba(255, 140, 0, 0.4);
-  background: linear-gradient(160deg, rgba(255, 140, 0, 0.06) 0%, var(--bg-card) 60%);
+  border-color: rgba(0, 200, 255, 0.4);
+  background: linear-gradient(160deg, rgba(0, 200, 255, 0.06) 0%, var(--bg-card) 60%);
   transform: scale(1.02);
-  box-shadow: 0 0 0 1px rgba(255, 140, 0, 0.2), var(--shadow-glow);
+  box-shadow: 0 0 0 1px rgba(0, 200, 255, 0.2), var(--shadow-glow);
 }
 .pricing-badge {
   position: absolute;
@@ -825,7 +825,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 }
 
 .pricing-note {
-  background: rgba(255, 140, 0, 0.05);
+  background: rgba(0, 200, 255, 0.05);
   border: 1px solid var(--border-accent);
   border-radius: var(--radius);
   padding: 20px 24px;
@@ -861,9 +861,9 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 }
 .support-card:hover { border-color: var(--border-accent); }
 .support-featured {
-  border-color: rgba(255, 140, 0, 0.4);
-  background: linear-gradient(160deg, rgba(255, 140, 0, 0.06) 0%, var(--bg-card) 60%);
-  box-shadow: 0 0 0 1px rgba(255, 140, 0, 0.2), var(--shadow-glow);
+  border-color: rgba(0, 200, 255, 0.4);
+  background: linear-gradient(160deg, rgba(0, 200, 255, 0.06) 0%, var(--bg-card) 60%);
+  box-shadow: 0 0 0 1px rgba(0, 200, 255, 0.2), var(--shadow-glow);
 }
 .support-badge {
   position: absolute;
@@ -1042,7 +1042,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   position: absolute;
   top: -80px; left: 50%; transform: translateX(-50%);
   width: 500px; height: 400px;
-  background: radial-gradient(ellipse, rgba(255, 140, 0, 0.12) 0%, rgba(224, 64, 160, 0.06) 50%, transparent 70%);
+  background: radial-gradient(ellipse, rgba(0, 200, 255, 0.12) 0%, rgba(68, 119, 238, 0.06) 50%, transparent 70%);
   pointer-events: none;
 }
 .cta-title {
