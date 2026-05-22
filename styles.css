@@ -79,13 +79,13 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 }
 .logo-icon { display: flex; align-items: center; }
 .hero-logo {
-  height: 120px;
+  height: 200px;
   width: auto;
-  max-width: 480px;
+  max-width: 560px;
   margin: 0 auto 8px;
 }
 .logo-img {
-  height: 44px;
+  height: 52px;
   width: auto;
   max-width: none;
 }
