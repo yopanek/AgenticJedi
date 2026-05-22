@@ -21,7 +21,7 @@
         <li><a href="#how-it-works">How It Works</a></li>
         <li><a href="#faq">FAQ</a></li>
       </ul>
-      <a href="mailto:hello@agenticjedi.com?subject=Discovery Call" class="btn btn-nav">Book a Free Call</a>
+      <a href="#contact" class="btn btn-nav">Book a Free Call</a>
       <button class="nav-toggle" aria-label="Menu">&#9776;</button>
     </div>
   </nav>
@@ -42,7 +42,7 @@
         You've heard AI can transform your business — but knowing where to start is overwhelming. We assess your workflows, identify your biggest opportunities, and implement AI automations that actually work for your business.
       </p>
       <div class="hero-cta">
-        <a href="mailto:hello@agenticjedi.com?subject=Free Discovery Call" class="btn btn-primary btn-lg">Book a Free Discovery Call</a>
+        <a href="#contact" class="btn btn-primary btn-lg">Book a Free Discovery Call</a>
         <a href="#how-it-works" class="btn btn-ghost btn-lg">See How It Works →</a>
       </div>
       <p class="hero-note">No technical knowledge required &nbsp;·&nbsp; Free 30-min discovery call &nbsp;·&nbsp; Cancel anytime</p>
@@ -144,7 +144,7 @@
             <li>✅ <strong>Honest assessment</strong> — we'll tell you what AI can't do for you, too</li>
             <li>✅ <strong>Results accountability</strong> — we measure success by your time saved and business impact</li>
           </ul>
-          <a href="mailto:hello@agenticjedi.com?subject=Discovery Call" class="btn btn-primary">Book a Free Discovery Call</a>
+          <a href="#contact" class="btn btn-primary">Book a Free Discovery Call</a>
         </div>
         <div class="why-visual">
           <div class="before-after-card">
@@ -248,17 +248,37 @@
     </div>
   </section>
 
-  <!-- CTA -->
-  <section class="section cta-section">
+  <!-- CONTACT -->
+  <section class="section cta-section" id="contact">
     <div class="container">
       <div class="cta-inner">
         <div class="cta-glow"></div>
         <h2 class="cta-title">Let's find your first AI win.</h2>
-        <p class="cta-desc">Book a free 30-minute discovery call. We'll listen to your business, identify your biggest automation opportunity, and give you an honest assessment — no sales pressure, no jargon.</p>
-        <div class="cta-buttons">
-          <a href="mailto:hello@agenticjedi.com?subject=Free Discovery Call" class="btn btn-primary btn-lg">Book a Free Discovery Call</a>
-          <a href="mailto:hello@agenticjedi.com" class="btn btn-ghost btn-lg">Send Us a Message</a>
-        </div>
+        <p class="cta-desc">Tell us a bit about your business and we'll reach out to schedule a free 30-minute discovery call — no sales pressure, no jargon.</p>
+        <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" id="contactForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Your Name</label>
+              <input type="text" id="name" name="name" placeholder="Jane Smith" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" placeholder="jane@yourcompany.com" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="business">Business / Company <span class="form-optional">(optional)</span></label>
+            <input type="text" id="business" name="business" placeholder="Acme Consulting" />
+          </div>
+          <div class="form-group">
+            <label for="message">What's your biggest time drain right now?</label>
+            <textarea id="message" name="message" rows="4" placeholder="e.g. I spend hours every week on email follow-ups and scheduling..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-lg btn-block">Send Message →</button>
+          <div class="form-success" id="formSuccess">
+            <span>✅</span> Thanks! We'll be in touch within one business day.
+          </div>
+        </form>
         <p class="cta-note">Free 30-minute call &nbsp;·&nbsp; No commitment &nbsp;·&nbsp; Straight talk about what AI can do for your business</p>
       </div>
     </div>
