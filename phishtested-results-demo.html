@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PhishTested — Employee Results</title>
+
+<!--
+  PURPOSE: This is a DEMO TARGET page for the Island masking beat.
+  It intentionally displays sensitive-looking data in PLAIN TEXT.
+  Island — not this page — does the masking, via a policy you configure.
+  DO NOT add JavaScript that masks the data: that would fake the exact
+  capability being demoed and destroy credibility if a reviewer inspects it.
+
+  DATA IS SYNTHETIC:
+   - SSNs are fabricated but use valid area/group/serial ranges, so Island's
+     pattern detector actually fires (random junk can fail stricter validators).
+   - Card numbers are the standard payment-processor TEST numbers (Visa 4111...,
+     Mastercard 5555..., Amex 3782..., Discover 6011...). They are Luhn-valid so
+     detection triggers, and safe because they map to no real account.
+   - No real individuals are represented.
+
+  No external dependencies (no CDN, no framework) so it renders identically
+  anywhere, offline, and can't be blamed on a failed network load on stage.
+-->
+
+<style>
+  /* System font stack — no web-font download, so the page never waits on a
+     network request to look right during a live demo. */
+  :root {
+    --ink: #1a1f2b;
+    --muted: #667085;
+    --line: #e4e7ec;
+    --bg: #f7f8fa;
+    --brand: #0b3d5c;
+    --fail-bg: #fdecec;
+    --fail-ink: #b42318;
+    --pass-bg: #e7f4ec;
+    --pass-ink: #197a3e;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: var(--ink);
+    background: var(--bg);
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 32px 24px 64px; }
+
+  /* Header made to read like a real internal tool, so the demo feels credible. */
+  header { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 8px; }
+  .logo { display: flex; align-items: center; gap: 12px; }
+  .logo .mark {
+    width: 38px; height: 38px; border-radius: 9px; background: var(--brand);
+    color: #fff; display: grid; place-items: center; font-weight: 700; font-size: 18px;
+  }
+  .logo h1 { font-size: 18px; margin: 0; letter-spacing: -0.01em; }
+  .logo p { margin: 2px 0 0; font-size: 12px; color: var(--muted); }
+  .env { font-size: 12px; color: var(--muted); text-align: right; }
+  .env strong { color: var(--ink); }
+
+  /* Honesty banner — makes clear the data is fake. Keeps the demo above-board. */
+  .synthetic {
+    margin: 18px 0 24px; padding: 10px 14px; border-radius: 8px;
+    background: #fff8e6; border: 1px solid #f2d98a; color: #7a5b12; font-size: 12.5px;
+  }
+
+  .card { background: #fff; border: 1px solid var(--line); border-radius: 12px; overflow: hidden; }
+  .card-head { padding: 16px 20px; border-bottom: 1px solid var(--line); display: flex; justify-content: space-between; align-items: baseline; }
+  .card-head h2 { font-size: 15px; margin: 0; }
+  .card-head span { font-size: 12px; color: var(--muted); }
+
+  table { width: 100%; border-collapse: collapse; font-size: 13.5px; }
+  thead th {
+    text-align: left; font-weight: 600; color: var(--muted); font-size: 11.5px;
+    text-transform: uppercase; letter-spacing: 0.04em; padding: 12px 20px; background: #fbfcfd;
+    border-bottom: 1px solid var(--line);
+  }
+  tbody td { padding: 13px 20px; border-bottom: 1px solid var(--line); vertical-align: middle; }
+  tbody tr:last-child td { border-bottom: none; }
+  .name { font-weight: 600; }
+  .email { color: var(--muted); font-size: 12px; }
+
+  /* Sensitive columns get a subtle mono treatment so they read as data fields
+     and are easy to point at when Island masks them. */
+  .sensitive { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; letter-spacing: 0.02em; }
+
+  .pill { display: inline-block; padding: 3px 9px; border-radius: 999px; font-size: 12px; font-weight: 600; }
+  .pill.fail { background: var(--fail-bg); color: var(--fail-ink); }
+  .pill.pass { background: var(--pass-bg); color: var(--pass-ink); }
+
+  footer { margin-top: 20px; font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="logo">
+        <div class="mark">PT</div>
+        <div>
+          <h1>PhishTested</h1>
+          <p>Phishing Awareness — Employee Results</p>
+        </div>
+      </div>
+      <div class="env">
+        Workspace: <strong>agenticjedi.ai</strong><br>
+        Campaign: Q2 Phishing Simulation
+      </div>
+    </header>
+
+    <!-- Visible, deliberate: this is what tells everyone the data is fabricated. -->
+    <div class="synthetic">
+      Synthetic test data. All names, SSNs, and card numbers are fabricated for demonstration.
+      Card numbers are standard payment-processor test values. No real individuals or accounts are represented.
+    </div>
+
+    <div class="card">
+      <div class="card-head">
+        <h2>Results — Q2 Simulation</h2>
+        <span>9 employees • 4 failed</span>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>Employee</th>
+            <th>Department</th>
+            <th>Result</th>
+            <th>Score</th>
+            <th>SSN</th>
+            <th>Card on File</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!--
+            Each row pairs a phishing result with the employee's PII.
+            The SSN + Card columns are the masking targets for Island.
+          -->
+          <tr>
+            <td><div class="name">Marcus Webb</div><div class="email">mwebb@agenticjedi.ai</div></td>
+            <td>Sales</td>
+            <td><span class="pill fail">Clicked link</span></td>
+            <td>41%</td>
+            <td class="sensitive">412-55-8830</td>
+            <td class="sensitive">4111 1111 1111 1111</td>
+          </tr>
+          <tr>
+            <td><div class="name">Dana Ortiz</div><div class="email">dortiz@agenticjedi.ai</div></td>
+            <td>Operations</td>
+            <td><span class="pill pass">Reported</span></td>
+            <td>96%</td>
+            <td class="sensitive">501-22-7194</td>
+            <td class="sensitive">5555 5555 5555 4444</td>
+          </tr>
+          <tr>
+            <td><div class="name">Priya Nair</div><div class="email">pnair@agenticjedi.ai</div></td>
+            <td>Finance</td>
+            <td><span class="pill pass">Reported</span></td>
+            <td>92%</td>
+            <td class="sensitive">423-88-1207</td>
+            <td class="sensitive">3782 822463 10005</td>
+          </tr>
+          <tr>
+            <td><div class="name">Tom Callahan</div><div class="email">tcallahan@agenticjedi.ai</div></td>
+            <td>Support</td>
+            <td><span class="pill fail">Entered credentials</span></td>
+            <td>18%</td>
+            <td class="sensitive">467-31-9925</td>
+            <td class="sensitive">6011 1111 1111 1117</td>
+          </tr>
+          <tr>
+            <td><div class="name">Lena Brooks</div><div class="email">lbrooks@agenticjedi.ai</div></td>
+            <td>Marketing</td>
+            <td><span class="pill pass">Ignored</span></td>
+            <td>88%</td>
+            <td class="sensitive">419-64-3388</td>
+            <td class="sensitive">4012 8888 8888 1881</td>
+          </tr>
+          <tr>
+            <td><div class="name">Sam Okafor</div><div class="email">sokafor@agenticjedi.ai</div></td>
+            <td>Engineering</td>
+            <td><span class="pill fail">Clicked link</span></td>
+            <td>37%</td>
+            <td class="sensitive">452-19-6740</td>
+            <td class="sensitive">5105 1051 0510 5100</td>
+          </tr>
+          <tr>
+            <td><div class="name">Grace Kim</div><div class="email">gkim@agenticjedi.ai</div></td>
+            <td>HR</td>
+            <td><span class="pill pass">Reported</span></td>
+            <td>94%</td>
+            <td class="sensitive">434-72-1558</td>
+            <td class="sensitive">6011 0009 9013 9424</td>
+          </tr>
+          <tr>
+            <td><div class="name">Victor Reyes</div><div class="email">vreyes@agenticjedi.ai</div></td>
+            <td>Sales</td>
+            <td><span class="pill pass">Ignored</span></td>
+            <td>81%</td>
+            <td class="sensitive">428-53-0091</td>
+            <td class="sensitive">4012 8888 8888 1881</td>
+          </tr>
+          <tr>
+            <td><div class="name">Alicia Ford</div><div class="email">aford@agenticjedi.ai</div></td>
+            <td>Operations</td>
+            <td><span class="pill fail">Entered credentials</span></td>
+            <td>22%</td>
+            <td class="sensitive">445-27-8163</td>
+            <td class="sensitive">5555 5555 5555 4444</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <footer>
+      PhishTested • agenticjedi.ai • Internal — access restricted. Synthetic data for demonstration only.
+    </footer>
+  </div>
+</body>
+</html>
